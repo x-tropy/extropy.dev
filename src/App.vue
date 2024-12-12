@@ -9,11 +9,11 @@ import JoinUs from './components/JoinUs.vue'
 </script>
 
 <template>
-  <Introduction msg="Vite + Vue" />
+  <Introduction />
   <Origin />
   <CombinedApproach />
+  <Quote />
   <CurrentProgress />
   <CoreValues />
-  <Quote />
   <JoinUs />
 </template>

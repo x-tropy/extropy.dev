@@ -1,0 +1,94 @@
+.section {
+    @apply px-14 py-28;
+}
+
+.article-intro {
+    p {
+        @apply mx-auto w-4/5 text-lg font-serif my-4 tracking-tight text-midnight;
+        word-spacing: 1px;
+    }
+}
+
+.corner-intro-1 {
+
+    &::before {
+        content: "";
+        @apply inline-block absolute w-8 h-8 bottom-0 -left-8 bg-midnight rounded-br-2xl z-10;
+    }
+
+    &::after {
+        content: "";
+        @apply inline-block absolute w-8 h-8 bottom-0 -left-8 bg-white z-0;
+    }
+
+}
+
+.article-origin {
+    p {
+        @apply text-white mx-auto w-3/5 my-2 font-serif text-md text-center;
+    }
+}
+
+.corner-combined-1 {
+    @apply relative;
+
+    &::before {
+        content: "";
+        @apply inline-block absolute w-8 h-8 bottom-0 -right-8 bg-midnight rounded-bl-3xl z-10;
+    }
+
+    &::after {
+        content: "";
+        @apply inline-block absolute w-8 h-8 bottom-0 -right-8 bg-white z-0;
+    }
+}
+
+.corner-combined-2 {
+    @apply relative;
+
+    &::before {
+        content: "";
+        @apply inline-block absolute w-8 h-8 top-0 -left-8 bg-midnight rounded-tr-3xl z-10;
+    }
+
+    &::after {
+        content: "";
+        @apply inline-block absolute w-8 h-8 top-0 -left-8 bg-grass z-0;
+    }
+
+}
+
+.corner-quote {
+    @apply relative;
+
+    &::before {
+        content: "";
+        @apply inline-block absolute w-8 h-8 top-0 -left-8 bg-forrest rounded-tr-3xl z-10;
+    }
+
+    &::after {
+        content: "";
+        @apply inline-block absolute w-8 h-8 top-0 -left-8 bg-grass z-0;
+    }
+}
+
+.icon-container {
+    @apply py-8 rounded-xl border-2 border-gray-300 relative;
+    &.active {
+        @apply border-transparent bg-grass transition-all;
+    }
+    .logo {
+        @apply relative top-12 transition-all;
+    }
+    .desc, .label, .link {
+        @apply opacity-0 transition-all;
+    }
+    &:hover {
+        .logo {
+            @apply top-0;
+        }
+        .desc, .label, .link {
+            @apply opacity-100;
+        }
+    }
+}

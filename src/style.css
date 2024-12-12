@@ -1,3 +1,7 @@
+@import "/src/assets/stylesheets/font-english.css";
+@import "/src/assets/stylesheets/scrollbar.css";
+@import "/src/assets/stylesheets/layout.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
