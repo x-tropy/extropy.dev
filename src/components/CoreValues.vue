@@ -14,7 +14,7 @@
           to transform their understanding into tangible outputs, showcasing their actual progress.</p>
       </div>
       <div class="col-span-1">
-        <img class="my-8" src="../assets/images/core-values.svg"/>
+        <img draggable="false" class="select-none pointer-events-none my-8" src="../assets/images/core-values.svg"/>
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 <script setup>
-import {ref} from "vue"
+import {onMounted, ref} from "vue"
+import {preloadImage} from "./util.js";
 
 const copySuccess = ref(false)
 const copyToClipboard = async () => {
@@ -15,6 +16,11 @@ const copyToClipboard = async () => {
     console.error("Failed to copy text: ", error);
   }
 }
+
+onMounted(() => {
+  preloadImage("../assets/images/check.svg")
+  preloadImage("../assets/images/copy.svg")
+})
 </script>
 
 <template>

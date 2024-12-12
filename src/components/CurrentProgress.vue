@@ -1,5 +1,6 @@
 <script setup>
-import {ref} from "vue"
+import {onMounted, ref} from "vue"
+import {preloadImage} from "./util.js";
 
 const icons = ["noteOS", "docRoll", "dbWizard", "uniStack", "Rote"]
 const descriptions = [
@@ -17,14 +18,21 @@ const statuses = [
   "draft",
 ]
 const links = [
-    "https://noteos.org",
-    "https://docroll.fly.dev",
-    "https://noteos.org/buwei/what-is-dbwizard",
-    "https://noteos.org/buwei/what-is-unistack",
-    "https://noteos.org/buwei/what-is-rote",
+  "https://noteos.org",
+  "https://docroll.fly.dev",
+  "https://noteos.org/buwei/what-is-dbwizard",
+  "https://noteos.org/buwei/what-is-unistack",
+  "https://noteos.org/buwei/what-is-rote",
 ]
 const hoveredIndex = ref(0)
 const navigateTo = link => window.location.href = link
+
+onMounted(() => {
+  icons.forEach(icon => {
+    preloadImage("/src/assets/images/logo/" + icon + ".svg")
+    preloadImage("/src/assets/images/logo/" + icon + "-white.svg")
+  })
+})
 </script>
 
 <template>
@@ -39,8 +47,12 @@ const navigateTo = link => window.location.href = link
           <img class="logo block max-h-6 mx-auto"
                :src="'/src/assets/images/logo/'+icon + (hoveredIndex === index ? '.svg' : '-white.svg')"
           />
-          <p class="desc font-serif text-sm text-midnight text-center leading-tight px-2 my-6">{{descriptions[index]}}</p>
-          <span class="label tracking-wide rounded-sm text-[11px] font-bold uppercase absolute left-3 bottom-2 text-white px-1 bg-forrest">{{statuses[index]}}</span>
+          <p class="desc font-serif text-sm text-midnight text-center leading-tight px-2 my-6">
+            {{ descriptions[index] }}</p>
+          <span
+              class="label tracking-wide rounded-sm text-[11px] font-bold uppercase absolute left-3 bottom-2 text-white px-1 bg-forrest">{{
+              statuses[index]
+            }}</span>
           <a class="link absolute bottom-1 right-1" :href="links[index]">
             <img src="../assets/images/arrow-right.svg"/>
           </a>
