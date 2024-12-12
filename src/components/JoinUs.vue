@@ -25,7 +25,7 @@ const copyToClipboard = async () => {
       We welcome designers, programmers, and educational content creators of all experience levels to join our community
       and help shape the future of learning—your contributions matter!
     </p>
-    <div class=" w-1/3 flex mx-auto my-10 border-2 border-daylight rounded-lg p-2 relative">
+    <div class="w-1/2 lg:w-1/3 flex mx-auto my-10 border-2 border-daylight rounded-lg p-2 relative">
       <img class="mx-3" src="../assets/images/mail.svg"/>
       <span class="mt-2 font-sans tracking-wider text-lg w-full">join@extropy.dev</span>
       <img v-if="copySuccess" @click="copyToClipboard" src="../assets/images/check.svg"

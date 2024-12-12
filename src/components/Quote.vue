@@ -5,7 +5,7 @@
 <template>
   <div class="section bg-forrest">
     <div class="grid grid-cols-10 gap-4 text-midnight">
-      <div class="col-span-8 font-serif text-xl bg-grass rounded-2xl rounded-br-none px-20 leading-relaxed py-14">
+      <div class="col-span-8 font-serif text-lg lg:text-xl bg-grass rounded-2xl rounded-br-none px-10 lg:px-20 leading-relaxed py-14">
         Increasingly, people seem to misinterpret complexity as sophistication, which is baffling. The incomprehensible
         should cause suspicion rather than admiration. Possibly this trend results from a mistaken belief that using a
         somewhat mysterious device confers an aura of power on the user.
@@ -18,9 +18,9 @@
       <div class="col-span-2 bg-forrest relative top-4 z-20">
         <img draggable="false" class="select-none pointer-events-none " src="../assets/images/quote-mark.svg"/>
       </div>
-      <div class="col-span-6 bg-grass rounded-bl-2xl rounded-br-2xl corner-quote h-[120px] pl-10 ">
+      <div class="col-span-6 bg-grass rounded-bl-2xl rounded-br-2xl corner-quote p-8 pt-0 ">
         <h3 class="font-sans font-bold text-xl">Niklaus Wirth (1934-2024)</h3>
-        <p class="font-sans text-[16px] mt-3 leading-tight w-1/2 tracking-wide">Swiss computer scientist, creator of several programming languages, including Pascal</p>
+        <p class="font-sans text-[16px] mt-3 leading-tight w-full lg:w-2/3 tracking-wide">Swiss computer scientist, creator of several programming languages, including Pascal.</p>
       </div>
     </div>
   </div>
