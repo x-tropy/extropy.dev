@@ -36,10 +36,10 @@ const navigateTo = link => window.location.href = link
             @mouseover="hoveredIndex = index"
             @click="navigateTo(links[index])"
             :class="{ active: hoveredIndex === index }">
-          <img  v-show="hoveredIndex === index" class="logo block max-h-6 mx-auto"
+          <img  v-if="hoveredIndex === index" class="logo block max-h-6 mx-auto"
                :src="'/src/assets/images/logo/'+icon + '.svg'"
           />
-          <img v-show="hoveredIndex !== index" class="logo block max-h-6 mx-auto"
+          <img v-else="hoveredIndex !== index" class="logo block max-h-6 mx-auto"
                :src="'/src/assets/images/logo/'+icon + '-white.svg'"
           />
           <p class="desc font-serif text-sm text-midnight text-center leading-tight px-2 my-6">
