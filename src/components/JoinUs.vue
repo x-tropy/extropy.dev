@@ -1,13 +1,11 @@
 <script setup>
-import {onMounted, ref} from "vue"
-import {preloadImage} from "./util.js";
+import {ref} from "vue"
 
 const copySuccess = ref(false)
 const copyToClipboard = async () => {
   try {
     await navigator.clipboard.writeText("join@extropy.dev");
     copySuccess.value = true;
-  console.log(copySuccess.value)
     // Clear success message after a short time
     setTimeout(() => {
       copySuccess.value = false;
@@ -16,11 +14,6 @@ const copyToClipboard = async () => {
     console.error("Failed to copy text: ", error);
   }
 }
-
-onMounted(() => {
-  preloadImage("../assets/images/check.svg")
-  preloadImage("../assets/images/copy.svg")
-})
 </script>
 
 <template>
@@ -35,7 +28,9 @@ onMounted(() => {
     <div class=" w-1/3 flex mx-auto my-10 border-2 border-daylight rounded-lg p-2 relative">
       <img class="mx-3" src="../assets/images/mail.svg"/>
       <span class="mt-2 font-sans tracking-wider text-lg w-full">join@extropy.dev</span>
-      <img @click="copyToClipboard" :src="copySuccess ? '/src/assets/images/check.svg' : '/src/assets/images/copy.svg'"
+      <img v-if="copySuccess" @click="copyToClipboard" src="../assets/images/check.svg"
+           class=" p-2 rounded bg-daylight hover:bg-grass cursor-pointer"/>
+      <img v-else @click="copyToClipboard" src="../assets/images/copy.svg"
            class=" p-2 rounded bg-daylight hover:bg-grass cursor-pointer"/>
     </div>
     <img class="h-10 select-none pointer-events-none block mx-auto "

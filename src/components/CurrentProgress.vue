@@ -1,6 +1,5 @@
 <script setup>
-import {onMounted, ref} from "vue"
-import {preloadImage} from "./util.js";
+import {ref} from "vue"
 
 const icons = ["noteOS", "docRoll", "dbWizard", "uniStack", "Rote"]
 const descriptions = [
@@ -26,13 +25,6 @@ const links = [
 ]
 const hoveredIndex = ref(0)
 const navigateTo = link => window.location.href = link
-
-onMounted(() => {
-  icons.forEach(icon => {
-    preloadImage("/src/assets/images/logo/" + icon + ".svg")
-    preloadImage("/src/assets/images/logo/" + icon + "-white.svg")
-  })
-})
 </script>
 
 <template>
@@ -44,8 +36,11 @@ onMounted(() => {
             @mouseover="hoveredIndex = index"
             @click="navigateTo(links[index])"
             :class="{ active: hoveredIndex === index }">
-          <img class="logo block max-h-6 mx-auto"
-               :src="'/src/assets/images/logo/'+icon + (hoveredIndex === index ? '.svg' : '-white.svg')"
+          <img  v-show="hoveredIndex === index" class="logo block max-h-6 mx-auto"
+               :src="'/src/assets/images/logo/'+icon + '.svg'"
+          />
+          <img v-show="hoveredIndex !== index" class="logo block max-h-6 mx-auto"
+               :src="'/src/assets/images/logo/'+icon + '-white.svg'"
           />
           <p class="desc font-serif text-sm text-midnight text-center leading-tight px-2 my-6">
             {{ descriptions[index] }}</p>
