@@ -2,6 +2,12 @@
 import {ref} from "vue"
 
 const icons = ["noteOS", "docRoll", "dbWizard", "uniStack", "Rote"]
+const iconPath = icons.map(iconName => {
+  return {
+    color: new URL(`../assets/images/logo/${iconName}.svg`, import.meta.url).href,
+    gray: new URL(`../assets/images/logo/${iconName}-white.svg`, import.meta.url).href,
+  };
+})
 const descriptions = [
   "Your central vault for personal knowledge. Fully powered by AI.",
   "Turn doc site into slides. Learn better with auto-generated videos.",
@@ -36,11 +42,11 @@ const navigateTo = link => window.location.href = link
             @mouseover="hoveredIndex = index"
             @click="navigateTo(links[index])"
             :class="{ active: hoveredIndex === index }">
-          <img  v-if="hoveredIndex === index" class="logo block max-h-6 mx-auto"
-               :src="'/src/assets/images/logo/'+icon + '.svg'"
+          <img v-if="hoveredIndex === index" class="logo block max-h-6 mx-auto"
+               :src="iconPath[index].color"
           />
           <img v-else="hoveredIndex !== index" class="logo block max-h-6 mx-auto"
-               :src="'/src/assets/images/logo/'+icon + '-white.svg'"
+               :src="iconPath[index].gray"
           />
           <p class="desc font-serif text-sm text-midnight text-center leading-tight px-2 my-6">
             {{ descriptions[index] }}</p>
