@@ -18,6 +18,7 @@ const copyToClipboard = async () => {
 
 <template>
   <div class="section bg-midnight relative text-daylight text-center pb-0">
+    <div class="wrapper">
     <h2 class="text-2xl leading-tight sm:text-3xl  font-extrabold ">
       Join our journey
     </h2>
@@ -40,6 +41,7 @@ const copyToClipboard = async () => {
     <footer class=" text-[14px] tracking-wide text-daylight text-center relative pt-20 pb-10">
       © 2024 Extropy Educational Technologies, All rights reserved.
     </footer>
+  </div>
   </div>
 </template>
 

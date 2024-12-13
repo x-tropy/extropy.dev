@@ -4,6 +4,7 @@
 
 <template>
   <div class="section pt-0 bg-midnight">
+    <div class="wrapper">
     <div class="sm:grid grid-cols-10 gap-4">
       <div class="sm:col-span-4 bg-daylight px-4 sm:pl-10 pt-8 pb-4 sm:pb-0 mb-4 sm:mb-0 sm:pr-6 rounded-2xl sm:rounded-none sm:rounded-tl-2xl sm:rounded-tr-2xl">
         <h2 class="text-2xl font-bold leading-tight">
@@ -41,6 +42,7 @@
         </h2>
       </div>
 
+    </div>
     </div>
   </div>
 </template>

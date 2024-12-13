@@ -4,6 +4,7 @@
 
 <template>
   <div class="section bg-grass">
+    <div class="wrapper">
     <div class="bg-forrest rounded-2xl flex flex-col lg:grid grid-cols-2 px-4 sm:px-8">
       <div class="lg:col-span-1">
         <h3 class="uppercase font-semibold text-xs sm:text-[14px] text-grass mt-10 tracking-wide">Bridging Learning and Creativity</h3>
@@ -17,6 +18,7 @@
         <img draggable="false" class="select-none pointer-events-none my-4 sm:my-8" src="../assets/images/core-values.svg"/>
       </div>
     </div>
+  </div>
   </div>
 </template>
 

@@ -9,6 +9,7 @@ defineProps({
 
 <template>
   <div class="bg-midnight section pt-0 relative">
+    <div class="wrapper">
     <a href="https://github.com/x-tropy/extropy.dev" target="_blank" class="block absolute right-6 sm:right-14 top-5 sm:top-14">
       <img class=" block p-2 border-2 border-white border-opacity-30 transition-all hover:border-opacity-100 rounded-lg"
            src="../assets/images/github.svg"/>
@@ -36,5 +37,6 @@ defineProps({
         unleash their potential.
       </p>
     </div>
+  </div>
   </div>
 </template>
