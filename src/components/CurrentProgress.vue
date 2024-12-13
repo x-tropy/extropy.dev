@@ -36,8 +36,8 @@ const navigateTo = link => window.location.href = link
 <template>
   <div class="section bg-midnight">
     <div class="bg-daylight rounded-2xl">
-      <h2 class="text-3xl font-sans  text-midnight text-center font-bold py-10">Our current progress</h2>
-      <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mx-10 pb-20">
+      <h2 class="text-2xl sm:text-3xl font-sans leading-tight text-midnight text-center font-bold py-10">Our current progress</h2>
+      <ul class="flex flex-col sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mx-10 pb-20">
         <li v-for="(icon, index) in icons" class="icon-container cursor-pointer" :key="index"
             @mouseover="hoveredIndex = index"
             @click="navigateTo(links[index])"
