@@ -1,5 +1,8 @@
 .section {
     @apply px-4 sm:px-6 md:px-10 lg:px-14 py-12 sm:py-28;
+    .wrapper {
+        @apply xl:w-[1100px] relative mx-auto;
+    }
 }
 
 .article-intro {
@@ -78,7 +81,7 @@
         @apply border-transparent bg-grass transition-all;
     }
     .logo {
-        @apply relative top-12 transition-all;
+        @apply relative top-10 sm:top-8 md:top-12 transition-all;
     }
     .desc, .label, .link {
         @apply opacity-0 transition-all;
