@@ -9,9 +9,9 @@ export default {
             colors: {
                 midnight: "#043f2e",
                 daylight: "#eef2e3",
-                grass: "#C8F169",
-                greenland: "#78C51C",
-                forrest: "#2A6F2B"
+                grass: "#EAFFB8",
+                greenland: "#ACDD72",
+                forrest: "#387041"
             },
             fontSize: {
                 "3xl": "52px",

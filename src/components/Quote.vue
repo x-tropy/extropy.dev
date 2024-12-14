@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="section bg-forrest">
+  <div class="section bg-forrest text-midnight">
     <div class="wrapper">
       <div class="flex flex-col-reverse sm:grid grid-cols-10 gap-4 text-midnight">
         <div
