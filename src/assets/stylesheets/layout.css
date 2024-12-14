@@ -21,7 +21,7 @@
 
     &::after {
         content: "";
-        @apply inline-block absolute w-8 h-8 bottom-0 -left-8 bg-white z-0;
+        @apply inline-block absolute w-8 h-8 bottom-0 -left-8 bg-daylight z-0;
     }
 
 }
@@ -76,7 +76,7 @@
 }
 
 .icon-container {
-    @apply py-8 rounded-xl border-2 border-gray-300 relative;
+    @apply py-8 rounded-xl border-2 bg-white border-gray-300 relative;
     &.active {
         @apply border-transparent bg-grass transition-all;
     }

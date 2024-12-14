@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="section bg-grass">
+  <div class="section bg-greenland">
     <div class="wrapper">
     <div class="bg-forrest rounded-2xl flex flex-col lg:grid grid-cols-2 px-4 sm:px-8">
       <div class="lg:col-span-1">
